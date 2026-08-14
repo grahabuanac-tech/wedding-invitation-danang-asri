@@ -61,7 +61,35 @@ body:before{content:"";position:fixed;inset:0;pointer-events:none;z-index:9999;o
   </div>
   <div class="hero-inner hero-content-hidden" id="heroContent">
     <div class="eyebrow">Undangan Pernikahan</div>
-    <h1>Danang <span class="amp">&</span> Asri</h1>
+  <h1 class="couple-name">
+    <span class="name-line">Danang</span>
+    <span class="amp-line">&amp;</span>
+    <span class="name-line">Asri</span>
+  </h1>
+    
+    .couple-name{
+  margin:22px 0 18px;
+  text-align:center;
+  line-height:1;
+  font-weight:400;
+}
+
+.couple-name .name-line{
+  display:block;
+  font-size:clamp(3.2rem,10vw,5.8rem);
+  line-height:.9;
+  letter-spacing:-.02em;
+}
+
+.couple-name .amp-line{
+  display:block;
+  font-size:clamp(1.7rem,5vw,2.8rem);
+  line-height:.8;
+  margin:10px 0;
+  font-style:italic;
+  color:var(--gold);
+}
+    
     <div class="ornament"></div>
     <div class="date">27 September 2026</div>
     <button class="open-btn" onclick="document.getElementById('undangan').scrollIntoView({behavior:'smooth'})">Buka Undangan</button>
