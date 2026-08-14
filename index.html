@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<meta name="theme-color" content="#8b6f47">
+<meta name="theme-color" content="#07111f">
 <title>Undangan Pernikahan Danang & Asri</title>
 <style>
 :root{--gold:#9b7a45;--cream:#fbf7ef;--ink:#332c25;--muted:#756b61;--white:#fffdf9}
@@ -221,6 +221,75 @@ footer{background:#050c16;color:#9daaba}
   }
 }
 
+
+/* ================= PREWEDDING PHOTO ================= */
+.prewed-section{
+  padding-top:42px;
+  padding-bottom:72px;
+}
+.prewed-wrap{
+  position:relative;
+  max-width:780px;
+  margin:30px auto 0;
+  padding:10px;
+  border-radius:30px;
+  background:linear-gradient(135deg,rgba(185,160,106,.62),rgba(185,160,106,.14),rgba(185,160,106,.62));
+  box-shadow:0 24px 55px rgba(0,0,0,.28);
+}
+.prewed-wrap::before{
+  content:"";
+  position:absolute;
+  inset:5px;
+  border:1px solid rgba(255,255,255,.10);
+  border-radius:26px;
+  pointer-events:none;
+  z-index:2;
+}
+.prewed-photo{
+  display:block;
+  width:100%;
+  height:auto;
+  aspect-ratio:1402 / 1122;
+  object-fit:cover;
+  border-radius:22px;
+  border:1px solid rgba(185,160,106,.28);
+  box-shadow:0 12px 30px rgba(0,0,0,.22);
+  transform:translateZ(0);
+}
+.prewed-caption{
+  margin:18px auto 0;
+  color:#b6c0cc;
+  font-size:.78rem;
+  letter-spacing:.18em;
+  text-transform:uppercase;
+}
+.prewed-title{
+  margin:4px 0 0;
+  color:#f2eee5;
+  font-size:1.25rem;
+  font-weight:400;
+}
+.prewed-wrap::after{
+  content:"";
+  position:absolute;
+  width:120px;
+  height:120px;
+  right:-18px;
+  top:-18px;
+  border-top:1px solid rgba(185,160,106,.55);
+  border-right:1px solid rgba(185,160,106,.55);
+  border-radius:0 30px 0 0;
+  pointer-events:none;
+}
+@media(max-width:650px){
+  .prewed-section{padding-top:28px;padding-bottom:56px}
+  .prewed-wrap{margin-top:24px;padding:7px;border-radius:24px}
+  .prewed-wrap::before{inset:4px;border-radius:20px}
+  .prewed-photo{border-radius:17px}
+  .prewed-caption{font-size:.68rem;letter-spacing:.14em}
+  .prewed-title{font-size:1.08rem}
+}
+
 </style>
 </head>
 <body>
@@ -254,6 +323,16 @@ footer{background:#050c16;color:#9daaba}
 </section>
 
 <main id="undangan">
+<section class="section reveal prewed-section" id="prewedding">
+  <div class="eyebrow">Momen Kami</div>
+  <h2>Danang & Asri</h2>
+  <div class="prewed-wrap">
+    <img class="prewed-photo" src="prewed.png" alt="Foto prewedding Danang dan Asri" loading="lazy" decoding="async">
+  </div>
+  <div class="prewed-caption">Prewedding</div>
+  <div class="prewed-title">Menuju hari bahagia</div>
+</section>
+
 <section class="section reveal">
   <h2>Dengan penuh kebahagiaan</h2>
   <p class="lead">Kami mengundang Bapak/Ibu/Saudara/i untuk hadir dan memberikan doa restu pada hari bahagia kami.</p>
@@ -292,7 +371,7 @@ footer{background:#050c16;color:#9daaba}
     <div class="gift-icon">✦</div>
     <div class="gift-label">Dana</div>
     <div class="gift-number" id="danaNumber">088222533154</div>
-    <div class="gift-name">Dana • Asri Kusniyanti</div>
+    <div class="gift-name">Dana • Asri Kurniyanti</div>
     <button class="btn gift-copy" id="copyDana" type="button">Salin Nomor Dana</button>
     <div class="copy-status" id="copyStatus" role="status"></div>
   </div>
